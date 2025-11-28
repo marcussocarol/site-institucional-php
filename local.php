@@ -17,6 +17,7 @@ require_once 'includes/header.php';
                                         <div class="store-info">
                                             <h5 class="card-title">SportMax - Loja Principal</h5>
                                             <p class="card-text">
+                                                <br>
                                                 <i class="fas fa-map-marker-alt text-danger me-2"></i>
                                                 Rua dos Esportes, 123<br>
                                                 Vila Olímpica - São Paulo, SP<br>
@@ -53,6 +54,7 @@ require_once 'includes/header.php';
                                         <div class="store-info">
                                             <h5 class="card-title">SportMax - Loja Express</h5>
                                             <p class="card-text">
+                                                <br>
                                                 <i class="fas fa-map-marker-alt text-danger me-2"></i>
                                                 Av. Paulista, 1000<br>
                                                 Bela Vista - São Paulo, SP<br>
@@ -89,6 +91,7 @@ require_once 'includes/header.php';
                                         <div class="store-info">
                                             <h5 class="card-title">SportMax - Shopping Center</h5>
                                             <p class="card-text">
+                                                <br>
                                                 <i class="fas fa-map-marker-alt text-danger me-2"></i>
                                                 Shopping Esporte Plaza, Loja 245<br>
                                                 Av. das Modalidades, 456<br>

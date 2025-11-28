@@ -1,24 +1,5 @@
 // SportMax - Custom JavaScript
 
-function toggleDarkMode() {
-    const body = document.body;
-    const icon = document.getElementById("darkModeIcon");
-
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-        localStorage.setItem("darkMode", "enabled");
-        showToast("Modo noturno ativado", "info");
-    } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-        localStorage.setItem("darkMode", "disabled");
-        showToast("Modo claro ativado", "info");
-    }
-}
-
 // Funções para a página de detalhes, agora dentro de produtos.html
 function changeImage(thumbnail) {
     const mainImage = document.getElementById("mainImage");
@@ -95,25 +76,6 @@ cartRemoveButtons.forEach((button) => {
         showToast('Redirecionando para a sacola...', 'info');
     });
 }
-    
-    const darkModeToggle = document.getElementById("darkModeToggle");
-
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener("click", toggleDarkMode);
-    }
-
-    // Aplicar modo noturno salvo no localStorage
-    const darkMode = localStorage.getItem("darkMode");
-    const body = document.body;
-    const icon = document.getElementById("darkModeIcon");
-
-    if (darkMode === "enabled") {
-        body.classList.add("dark-mode");
-        if (icon) {
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
-        }
-    }
 
     // Hero Carousel Functionality
     let currentSlide = 0;
@@ -524,5 +486,4 @@ cartRemoveButtons.forEach((button) => {
     
     console.log("SportMax website loaded successfully! 🏃‍♂️");
     console.log("SportMax - All pages functionality loaded! 🚀");
-    console.log("SportMax - Dark mode functionality loaded! 🌙");
 });

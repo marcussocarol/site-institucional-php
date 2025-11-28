@@ -1,7 +1,5 @@
 <?php 
-// 1. Define o título para esta página
 $pageTitle = "SportMax - Produtos";
-// 2. Inclui o cabeçalho (que abre as tags necessárias)
 require_once 'includes/header.php'; 
 ?>
 
@@ -10,139 +8,354 @@ require_once 'includes/header.php';
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100 product-card" data-product-id="1">
+                    <div class="card h-100 product-card">
                         <img src="img/tenis.jpg" class="card-img-top" alt="Tênis de Corrida">
                         <div class="card-body">
                             <h5 class="card-title">Tênis de Corrida</h5>
-                            <p class="card-text text-muted">Tênis leve e respirável, ideal para treinos diários.</p>
                         </div>
                         <div class="card-footer d-flex justify-content-between align-items-center">
-                            <span class="product-price">R$ 350,00</span>
-                            <a href="sacola.php" class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Comprar</a>
+                            <span class="product-price fw-bold">R$ 350,00</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="1">
+                                <input type="hidden" name="nome" value="Tênis de Corrida">
+                                <input type="hidden" name="preco" value="350.00">
+                                <input type="hidden" name="imagem" value="img/tenis.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100 product-card" data-product-id="2">
+                    <div class="card h-100 product-card">
                         <img src="img/camiseta.jpg" class="card-img-top" alt="Camiseta Dry-fit">
                         <div class="card-body">
                             <h5 class="card-title">Camiseta Dry-fit</h5>
-                            <p class="card-text text-muted">Tecido que absorve o suor, mantendo o corpo seco.</p>
                         </div>
                         <div class="card-footer d-flex justify-content-between align-items-center">
-                            <span class="product-price">R$ 89,90</span>
-                            <a href="sacola.php" class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Comprar</a>
+                            <span class="product-price fw-bold">R$ 59,90</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="2">
+                                <input type="hidden" name="nome" value="Camiseta Dry-fit">
+                                <input type="hidden" name="preco" value="59.90">
+                                <input type="hidden" name="imagem" value="img/camiseta.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100 product-card" data-product-id="3">
-                        <img src="img/bola.jpg" class="card-img-top" alt="Bola de Futebol Oficial">
+                    <div class="card h-100 product-card">
+                        <img src="img/oculos.jpg" class="card-img-top" alt="oculos">
+                        <div class="card-body">
+                            <h5 class="card-title">Óculos de Performance</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 79,90</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Óculos de Performance">
+                                <input type="hidden" name="preco" value="79,90">
+                                <input type="hidden" name="imagem" value="img/oculos.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/short.jpg" class="card-img-top" alt="Capacete">
+                        <div class="card-body">
+                            <h5 class="card-title">Short Duplo</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 65,00</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Short Duplo">
+                                <input type="hidden" name="preco" value="65.00">
+                                <input type="hidden" name="imagem" value="img/short.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/camisa.jpg" class="card-img-top" alt="Camisa">
+                        <div class="card-body">
+                            <h5 class="card-title">Camisa Arsenal</h5>
+
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 350,00</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Camisa Arsenal">
+                                <input type="hidden" name="preco" value="350.00">
+                                <input type="hidden" name="imagem" value="img/camisa.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/luvagol.jpg" class="card-img-top" alt="Capacete">
+                        <div class="card-body">
+                            <h5 class="card-title">Luvas de Goleiro</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 70,00</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Luvas de Goleiro">
+                                <input type="hidden" name="preco" value="70.00">
+                                <input type="hidden" name="imagem" value="img/luvagol.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/chuteira.jpg" class="card-img-top" alt="Chuteira">
+                        <div class="card-body">
+                            <h5 class="card-title">Chuteira</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 299,99</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Chuteira">
+                                <input type="hidden" name="preco" value="299.99">
+                                <input type="hidden" name="imagem" value="img/chuteira.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/bola.jpg" class="card-img-top" alt="Bola de Futebol">
                         <div class="card-body">
                             <h5 class="card-title">Bola de Futebol</h5>
-                            <p class="card-text text-muted">Bola de alta performance, para jogos e treinos.</p>
                         </div>
                         <div class="card-footer d-flex justify-content-between align-items-center">
-                            <span class="product-price">R$ 120,50</span>
-                            <a href="sacola.php" class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Comprar</a>
+                            <span class="product-price fw-bold">R$ 49,90</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="3">
+                                <input type="hidden" name="nome" value="Bola de Futebol">
+                                <input type="hidden" name="preco" value="49.90">
+                                <input type="hidden" name="imagem" value="img/bola.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100 product-card" data-product-id="4">
-                        <img src="img/halter.jpg" class="card-img-top" alt="Conjunto de Halteres">
+                    <div class="card h-100 product-card">
+                        <img src="img/leash.jpg" class="card-img-top" alt="leash">
+                        <div class="card-body">
+                            <h5 class="card-title">Surf Leash</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 79,90</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Surf Leash">
+                                <input type="hidden" name="preco" value="79.90">
+                                <input type="hidden" name="imagem" value="img/leash.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/oculosnat.jpg" class="card-img-top" alt="oculosnat">
+                        <div class="card-body">
+                            <h5 class="card-title">Óculos para natação</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 59,90</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="oculosnat">
+                                <input type="hidden" name="preco" value="59.90">
+                                <input type="hidden" name="imagem" value="img/oculosnat.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/traje.jpg" class="card-img-top" alt="Traje">
+                        <div class="card-body">
+                            <h5 class="card-title">Traje de Borracha</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 599,00</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Traje">
+                                <input type="hidden" name="preco" value="599.90">
+                                <input type="hidden" name="imagem" value="img/traje.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/touca.jpg" class="card-img-top" alt="Touca">
+                        <div class="card-body">
+                            <h5 class="card-title">Touca de Silicone</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 39,90</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Touca de Silicone">
+                                <input type="hidden" name="preco" value="39.90">
+                                <input type="hidden" name="imagem" value="img/touca.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/halter.jpg" class="card-img-top" alt="Halteres">
                         <div class="card-body">
                             <h5 class="card-title">Halteres Ajustáveis</h5>
-                            <p class="card-text text-muted">Perfeito para treinos em casa, economiza espaço.</p>
                         </div>
                         <div class="card-footer d-flex justify-content-between align-items-center">
-                            <span class="product-price">R$ 299,99</span>
-                            <a href="sacola.php" class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Comprar</a>
+                            <span class="product-price fw-bold">R$ 69,90</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Halteres Ajustáveis">
+                                <input type="hidden" name="preco" value="69.90">
+                                <input type="hidden" name="imagem" value="img/halter.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="py-5 product-details-section">
-        <div class="container">
-            <button id="backToProductsButton" class="btn btn-secondary mb-4"><i class="fas fa-arrow-left me-2"></i>Voltar para Produtos</button>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="product-gallery">
-                        <div class="main-image mb-3">
-                            <img src="img/tenis.jpg" alt="Tênis de Corrida Nike Air Max" class="img-fluid rounded" id="mainImage">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/coqueteleira.jpg" class="card-img-top" alt="Coqueteleira">
+                        <div class="card-body">
+                            <h5 class="card-title">Coqueteleira</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 19,90</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Coqueteleira">
+                                <input type="hidden" name="preco" value="19.90">
+                                <input type="hidden" name="imagem" value="img/coqueteleira.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="product-details">
-                        <h1 class="product-title mb-3">Tênis de Corrida Nike Air Max</h1>
-                        <div class="product-rating mb-3">
-                            <div class="stars">
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star-half-alt text-warning"></i>
-                            </div>
-                            <span class="rating-text ms-2">(4.5) - 127 avaliações</span>
-                        </div>
-                        <div class="product-price mb-4">
-                            <span class="price-old text-muted text-decoration-line-through me-2">R$ 299,99</span>
-                            <span class="price-current h3 text-success">R$ 209,99</span>
-                            <span class="discount-badge badge bg-danger ms-2">30% OFF</span>
-                        </div>
-                        
-                        <div class="product-options mb-4">
-                            <div class="size-selector mb-3">
-                                <label class="form-label">Tamanho:</label>
-                                <div class="size-options">
-                                    <button class="btn btn-outline-secondary size-btn">38</button>
-                                    <button class="btn btn-outline-secondary size-btn">39</button>
-                                    <button class="btn btn-outline-secondary size-btn active">40</button>
-                                    <button class="btn btn-outline-secondary size-btn">41</button>
-                                    <button class="btn btn-outline-secondary size-btn">42</button>
-                                    <button class="btn btn-outline-secondary size-btn">43</button>
-                                </div>
-                            </div>
-                            
-                            <div class="color-selector mb-3">
-                                <label class="form-label">Cor:</label>
-                                <div class="color-options">
-                                    <button class="btn color-btn active" style="background-color: #000;" title="Preto"></button>
-                                    <button class="btn color-btn" style="background-color: #fff; border: 1px solid #ddd;" title="Branco"></button>
-                                    <button class="btn color-btn" style="background-color: #ff0000;" title="Vermelho"></button>
-                                    <button class="btn color-btn" style="background-color: #0066cc;" title="Azul"></button>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="quantity-selector mb-4">
-                            <label class="form-label">Quantidade:</label>
-                            <div class="input-group" style="width: 150px;">
-                                <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity()">-</button>
-                                <input type="text" class="form-control text-center" value="1" id="quantity" readonly>
-                                <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity()">+</button>
-                            </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/suplemento.jpg" class="card-img-top" alt="Suplementos">
+                        <div class="card-body">
+                            <h5 class="card-title">Suplementos</h5>
                         </div>
-
-                        <div class="action-buttons mb-4">
-                            <button class="btn btn-primary btn-lg me-2">
-                                <i class="fas fa-shopping-cart me-2"></i>Adicionar à Sacola
-                            </button>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 99,99</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Suplementos">
+                                <input type="hidden" name="preco" value="99.99">
+                                <input type="hidden" name="imagem" value="img/suplemento.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="product-features">
-                            <h5>Características:</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Tecnologia Air Max para amortecimento</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Cabedal em mesh respirável</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Solado de borracha antiderrapante</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Ideal para corrida e caminhada</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Garantia de 1 ano contra defeitos de fabricação</li>
-                            </ul>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100 product-card">
+                        <img src="img/luva.jpg" class="card-img-top" alt="Halteres">
+                        <div class="card-body">
+                            <h5 class="card-title">Luvas de Musculação</h5>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <span class="product-price fw-bold">R$ 49,99</span>
+                            <form action="includes/carrinho.php" method="POST">
+                                <input type="hidden" name="acao" value="add">
+                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="nome" value="Luvas de Musculação">
+                                <input type="hidden" name="preco" value="49.99">
+                                <input type="hidden" name="imagem" value="img/luva.jpg">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-cart-plus me-1"></i> Comprar
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -151,7 +364,4 @@ require_once 'includes/header.php';
     </section>
 </div>
 
-<?php 
-// 3. Inclui o rodapé
-require_once 'includes/footer.php'; 
-?>
+<?php require_once 'includes/footer.php'; ?>

@@ -54,12 +54,7 @@ require_once 'includes/header.php';
                     </div>
 
                 </div>
-                <button class="carousel-control prev" onclick="changeSlide(-1)">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-control next" onclick="changeSlide(1)">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+                
             </section><section class="sports-section">
                 <div class="container">
                     <div class="sports-header">
