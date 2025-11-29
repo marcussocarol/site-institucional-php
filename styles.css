@@ -6,7 +6,7 @@
   --light-gray: #f8f9fa;
 }
 
-/* Brand Styling */
+/* Estilo da marca */
 .navbar-brand {
   font-size: 1.5rem;
   color: var(--primary-color) !important;
@@ -21,7 +21,7 @@
   color: var(--dark-color) !important;
 }
 
-/* Navigation */
+/* Navegação */
 .navbar-light .navbar-nav .nav-link {
   color: var(--dark-color);
   font-weight: 500;
@@ -85,7 +85,6 @@
   justify-content: center; /* Centraliza o conteúdo verticalmente */
 }
 
-/* Resto do CSS */
 .hero-content-wrapper {
   display: flex;
   justify-content: center;
@@ -164,7 +163,13 @@
   right: 20px;
 }
 
-/* Sports Section */
+.category-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Seção sports */
 .sports-section {
   padding: 3rem 0;
   background-color: #f8f9fa;
@@ -175,16 +180,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
-}
-
-.view-all-link {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.view-all-link:hover {
-  color: #0056b3;
-  text-decoration: underline;
 }
 
 .sports-main-cards {
@@ -244,10 +239,26 @@
   color: white;
 }
 
-/* Products Section */
+/* Seção produtos */
 .products-section {
   padding: 3rem 0;
   background: white;
+}
+
+.carousel-btn {
+  background-color: transparent;
+  border: 1px solid #6c757d;
+  color: #6c757d;
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #6c757d;
+  color: white;
 }
 
 .product-card {
@@ -264,70 +275,11 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-.product-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.product-image img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-image img {
-  transform: scale(1.05);
-}
-
-.product-info {
-  padding: 1rem;
-}
-
-.product-brand {
-  color: #6c757d;
-  margin-bottom: 0.25rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.product-title {
-  font-size: 0.9rem;
-  font-weight: 500;
-  line-height: 1.4;
-  margin-bottom: 0.5rem;
-  color: var(--dark-color);
-}
-
 .product-price {
   margin-bottom: 0.5rem;
 }
 
-.price-current {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--dark-color);
-}
-
-.cashback-text {
-  color: #28a745;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-.badge-cashback {
-  background-color: #28a745;
-  color: white;
-}
-
-.badge-frete {
-  background-color: var(--primary-color);
-  color: white;
-}
-
-/* Pricing Page */
+/* Página de preços */
 .payment-method-card {
   padding: 2rem 1rem;
   text-align: center;
@@ -338,12 +290,7 @@
   transform: translateY(-5px);
 }
 
-.payment-brands img {
-  height: 30px;
-  margin: 0 0.25rem;
-}
-
-/* Clients Page */
+/* Página de clientes */
 .client-type-card {
   padding: 2rem 1rem;
   height: 100%;
@@ -395,7 +342,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Comments Page */
+/* Página de comentários */
 .review-card {
   transition: transform 0.3s ease;
 }
@@ -418,7 +365,7 @@
   font-size: 0.85rem;
 }
 
-/* Contact Page */
+/* Página de contatos */
 .contact-info-card {
   padding: 2rem 1rem;
   text-align: center;
@@ -430,7 +377,7 @@
   text-align: center;
 }
 
-/* Location Page */
+/* Página de local */
 .store-card {
   transition: transform 0.3s ease;
 }
@@ -450,7 +397,7 @@
   text-align: center;
 }
 
-/* Social Media Page */
+/* Página de redes sociais */
 .social-card {
   transition: transform 0.3s ease;
   border: none;
@@ -465,11 +412,6 @@
 .social-stats .badge {
   font-size: 0.8rem;
   padding: 0.5rem 0.75rem;
-}
-
-.social-follow-buttons .btn {
-  margin: 0.25rem;
-  min-width: 120px;
 }
 
 /* Footer */
@@ -576,7 +518,7 @@
   color: #6c757d;
 }
 
-/* Responsive Design */
+/* Design responsivo */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
@@ -607,10 +549,6 @@
     margin-bottom: 1rem;
   }
 
-  .hero-section-simple h1 {
-    font-size: 2.5rem;
-  }
-
   .timeline {
     padding-left: 1rem;
   }
@@ -621,12 +559,6 @@
 
   .timeline-marker {
     left: -18px;
-  }
-
-  .rating-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
   }
 }
 
@@ -659,14 +591,9 @@
   .transport-option {
     padding: 1rem 0.5rem;
   }
-
-  .social-follow-buttons .btn {
-    min-width: 100px;
-    font-size: 0.85rem;
-  }
 }
 
-/* Animations */
+/* Animações */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -686,7 +613,7 @@
   animation: fadeInUp 0.6s ease-out;
 }
 
-/* Utility Classes */
+/* Classes utilitárias */
 .text-primary {
   color: var(--primary-color) !important;
 }
