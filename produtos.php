@@ -1,4 +1,9 @@
 <?php 
+
+// PÁGINA DE CATÁLOGO DE PRODUTOS
+// Exibe a grade de produtos disponíveis para compra.
+// Os produtos são estáticos (HTML), mas a integração com o carrinho é funcional via POST.
+
 $pageTitle = "SportMax - Produtos";
 require_once 'includes/header.php'; 
 ?>
@@ -63,7 +68,7 @@ require_once 'includes/header.php';
                                 <input type="hidden" name="acao" value="add">
                                 <input type="hidden" name="id" value="4">
                                 <input type="hidden" name="nome" value="Óculos de Performance">
-                                <input type="hidden" name="preco" value="79,90">
+                                <input type="hidden" name="preco" value="79.90">
                                 <input type="hidden" name="imagem" value="img/oculos.jpg">
                                 <button type="submit" class="btn btn-primary btn-sm">
                                     <i class="fas fa-cart-plus me-1"></i> Comprar
@@ -75,7 +80,7 @@ require_once 'includes/header.php';
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 product-card">
-                        <img src="img/short.jpg" class="card-img-top" alt="Capacete">
+                        <img src="img/short.jpg" class="card-img-top" alt="short">
                         <div class="card-body">
                             <h5 class="card-title">Short Duplo</h5>
                         </div>
@@ -83,7 +88,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 65,00</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="5">
                                 <input type="hidden" name="nome" value="Short Duplo">
                                 <input type="hidden" name="preco" value="65.00">
                                 <input type="hidden" name="imagem" value="img/short.jpg">
@@ -106,7 +111,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 350,00</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="6">
                                 <input type="hidden" name="nome" value="Camisa Arsenal">
                                 <input type="hidden" name="preco" value="350.00">
                                 <input type="hidden" name="imagem" value="img/camisa.jpg">
@@ -128,7 +133,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 70,00</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="7">
                                 <input type="hidden" name="nome" value="Luvas de Goleiro">
                                 <input type="hidden" name="preco" value="70.00">
                                 <input type="hidden" name="imagem" value="img/luvagol.jpg">
@@ -150,7 +155,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 299,99</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="8">
                                 <input type="hidden" name="nome" value="Chuteira">
                                 <input type="hidden" name="preco" value="299.99">
                                 <input type="hidden" name="imagem" value="img/chuteira.jpg">
@@ -194,7 +199,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 79,90</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="9">
                                 <input type="hidden" name="nome" value="Surf Leash">
                                 <input type="hidden" name="preco" value="79.90">
                                 <input type="hidden" name="imagem" value="img/leash.jpg">
@@ -208,7 +213,7 @@ require_once 'includes/header.php';
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 product-card">
-                        <img src="img/oculosnat.jpg" class="card-img-top" alt="oculosnat">
+                        <img src="img/oculosnat.jpg" class="card-img-top" alt="Óculos para natação">
                         <div class="card-body">
                             <h5 class="card-title">Óculos para natação</h5>
                         </div>
@@ -216,8 +221,8 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 59,90</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
-                                <input type="hidden" name="nome" value="oculosnat">
+                                <input type="hidden" name="id" value="10">
+                                <input type="hidden" name="nome" value="Óculos para natação">
                                 <input type="hidden" name="preco" value="59.90">
                                 <input type="hidden" name="imagem" value="img/oculosnat.jpg">
                                 <button type="submit" class="btn btn-primary btn-sm">
@@ -230,7 +235,7 @@ require_once 'includes/header.php';
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 product-card">
-                        <img src="img/traje.jpg" class="card-img-top" alt="Traje">
+                        <img src="img/traje.jpg" class="card-img-top" alt="Traje de Borracha">
                         <div class="card-body">
                             <h5 class="card-title">Traje de Borracha</h5>
                         </div>
@@ -238,8 +243,8 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 599,00</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
-                                <input type="hidden" name="nome" value="Traje">
+                                <input type="hidden" name="id" value="11">
+                                <input type="hidden" name="nome" value="Traje de Borracha">
                                 <input type="hidden" name="preco" value="599.90">
                                 <input type="hidden" name="imagem" value="img/traje.jpg">
                                 <button type="submit" class="btn btn-primary btn-sm">
@@ -252,7 +257,7 @@ require_once 'includes/header.php';
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 product-card">
-                        <img src="img/touca.jpg" class="card-img-top" alt="Touca">
+                        <img src="img/touca.jpg" class="card-img-top" alt="Touca de Silicone">
                         <div class="card-body">
                             <h5 class="card-title">Touca de Silicone</h5>
                         </div>
@@ -260,7 +265,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 39,90</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="12">
                                 <input type="hidden" name="nome" value="Touca de Silicone">
                                 <input type="hidden" name="preco" value="39.90">
                                 <input type="hidden" name="imagem" value="img/touca.jpg">
@@ -274,7 +279,7 @@ require_once 'includes/header.php';
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 product-card">
-                        <img src="img/halter.jpg" class="card-img-top" alt="Halteres">
+                        <img src="img/halter.jpg" class="card-img-top" alt="Halteres Ajustáveis">
                         <div class="card-body">
                             <h5 class="card-title">Halteres Ajustáveis</h5>
                         </div>
@@ -282,7 +287,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 69,90</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="13">
                                 <input type="hidden" name="nome" value="Halteres Ajustáveis">
                                 <input type="hidden" name="preco" value="69.90">
                                 <input type="hidden" name="imagem" value="img/halter.jpg">
@@ -304,7 +309,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 19,90</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="14">
                                 <input type="hidden" name="nome" value="Coqueteleira">
                                 <input type="hidden" name="preco" value="19.90">
                                 <input type="hidden" name="imagem" value="img/coqueteleira.jpg">
@@ -326,7 +331,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 99,99</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="15">
                                 <input type="hidden" name="nome" value="Suplementos">
                                 <input type="hidden" name="preco" value="99.99">
                                 <input type="hidden" name="imagem" value="img/suplemento.jpg">
@@ -340,7 +345,7 @@ require_once 'includes/header.php';
 
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                     <div class="card h-100 product-card">
-                        <img src="img/luva.jpg" class="card-img-top" alt="Halteres">
+                        <img src="img/luva.jpg" class="card-img-top" alt="Luvas de Musculação">
                         <div class="card-body">
                             <h5 class="card-title">Luvas de Musculação</h5>
                         </div>
@@ -348,7 +353,7 @@ require_once 'includes/header.php';
                             <span class="product-price fw-bold">R$ 49,99</span>
                             <form action="includes/carrinho.php" method="POST">
                                 <input type="hidden" name="acao" value="add">
-                                <input type="hidden" name="id" value="4">
+                                <input type="hidden" name="id" value="16">
                                 <input type="hidden" name="nome" value="Luvas de Musculação">
                                 <input type="hidden" name="preco" value="49.99">
                                 <input type="hidden" name="imagem" value="img/luva.jpg">

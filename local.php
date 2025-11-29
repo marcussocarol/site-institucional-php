@@ -1,7 +1,10 @@
 <?php 
-// 1. Define o título para esta página
+
+// PÁGINA DE LOCALIZAÇÃO E LOGÍSTICA
+// Exibe endereços das unidades físicas, políticas de entrega e meios de transporte.
+
 $pageTitle = "SportMax - Localização";
-// 2. Inclui o cabeçalho (que abre as tags wrapper, nav e content-wrapper)
+
 require_once 'includes/header.php'; 
 ?>
             <section class="py-5">
@@ -154,7 +157,7 @@ require_once 'includes/header.php';
                 </div>
             </section>
 
-            <!-- Delivery Areas -->
+            <!-- Áreas de entrega -->
             <section class="py-5 bg-light">
                 <div class="container">
                     <h2 class="text-center mb-5">Áreas de Entrega</h2>
@@ -205,7 +208,7 @@ require_once 'includes/header.php';
                 </div>
             </section>
 
-            <!-- Transportation -->
+            <!-- Transporte -->
             <section class="py-5">
                 <div class="container">
                     <h2 class="text-center mb-5">Como Chegar</h2>
@@ -248,6 +251,6 @@ require_once 'includes/header.php';
         </div>
 
 <?php 
-// 3. Inclui o rodapé
+
 require_once 'includes/footer.php'; 
 ?>

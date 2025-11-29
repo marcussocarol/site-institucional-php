@@ -1,11 +1,14 @@
 <?php 
-// 1. Define o título para esta página
+
+// PÁGINA INSTITUCIONAL - NOSSOS CLIENTES
+// Exibe os segmentos de clientes atendidos e uma linha do tempo da empresa.
+
 $pageTitle = "SportMax - Nossos Clientes";
-// 2. Inclui o cabeçalho (que abre as tags wrapper, nav e content-wrapper)
+
 require_once 'includes/header.php'; 
 ?>
 
-<!-- Client Types -->
+            <!-- Tipos de clientes -->
             <section class="py-5">
                 <div class="container">
                     <div class="row">
@@ -43,7 +46,7 @@ require_once 'includes/header.php';
                 </div>
             </section>
 
-            <!-- Client Success Stories -->
+            <!-- Histórias de sucesso dos clientes -->
             <section class="py-5">
                 <div class="container">
                     <h2 class="text-center mb-5">Histórias de Sucesso</h2>
@@ -84,6 +87,6 @@ require_once 'includes/header.php';
                 </div>
             </section>
 <?php 
-// 3. Inclui o rodapé
+
 require_once 'includes/footer.php'; 
 ?>

@@ -1,7 +1,10 @@
 <?php 
-// 1. Define o título para esta página
+
+// PÁGINA INSTITUCIONAL - SOBRE A EMPRESA
+// Responsável por apresentar a história, missão, visão e números da SportMax
+
 $pageTitle = "SportMax - Empresa";
-// 2. Inclui o cabeçalho
+
 require_once 'includes/header.php'; 
 ?>
 
@@ -73,6 +76,6 @@ require_once 'includes/header.php';
         </div>
     </section>
 </div> <?php 
-// 3. Inclui o rodapé
+
 require_once 'includes/footer.php'; 
 ?>

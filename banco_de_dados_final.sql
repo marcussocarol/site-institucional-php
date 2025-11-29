@@ -1,6 +1,9 @@
+-- SCRIPT DE CRIAÇÃO DO BANCO DE DADOS
+-- Define a estrutura das tabelas relacionais do sistema SportMax.
+
 USE sportmax_db;
 
--- Garante que a tabela de usuários existe
+-- Tabela de Usuários
 CREATE TABLE IF NOT EXISTS usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -9,7 +12,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Nova Tabela de Comentários (CRUD)
+-- Tabela de Comentários (CRUD)
 CREATE TABLE IF NOT EXISTS comentarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT NOT NULL,

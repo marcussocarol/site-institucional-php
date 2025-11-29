@@ -1,10 +1,12 @@
 <?php 
-// 1. Define o título para esta página
+
+// PÁGINA DE REDES SOCIAIS (HUB DE MÍDIA)
+
 $pageTitle = "SportMax - Redes Sociais";
-// 2. Inclui o cabeçalho (que abre as tags wrapper, nav e content-wrapper)
+
 require_once 'includes/header.php'; 
+
 ?>
-            <!-- Social Media Links -->
             <section class="py-5">
                 <div class="container">
                     <div class="row">
@@ -120,6 +122,6 @@ require_once 'includes/header.php';
             </section>
 
 <?php 
-// 3. Inclui o rodapé
+
 require_once 'includes/footer.php'; 
 ?>

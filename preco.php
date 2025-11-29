@@ -1,8 +1,12 @@
 <?php 
+
+// PÁGINA DE PREÇOS E PLANOS
+// Apresenta faixas de preço, ofertas especiais e métodos de pagamento aceitos.
+
 $pageTitle = "SportMax - Preços";
 require_once 'includes/header.php'; 
 ?>
-            <!-- Price Categories -->
+            <!-- Categorias de preço -->
             <section class="py-5">
                 <div class="container">
                     <div class="row">
@@ -22,7 +26,7 @@ require_once 'includes/header.php';
                                     </ul>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+                                    <a href="produtos.php" class="btn btn-primary">Ver Produtos</a>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +46,7 @@ require_once 'includes/header.php';
                                     </ul>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <a href="produtos.html" class="btn btn-success">Ver Produtos</a>
+                                    <a href="produtos.php" class="btn btn-success">Ver Produtos</a>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +66,7 @@ require_once 'includes/header.php';
                                     </ul>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <a href="produtos.html" class="btn btn-danger">Ver Produtos</a>
+                                    <a href="produtos.php" class="btn btn-danger">Ver Produtos</a>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +74,7 @@ require_once 'includes/header.php';
                 </div>
             </section>
 
-            <!-- Special Offers -->
+            <!-- Ofertas especiais -->
             <section class="py-5 bg-light">
                 <div class="container">
                     <h2 class="text-center mb-5">Ofertas Especiais</h2>
@@ -117,7 +121,7 @@ require_once 'includes/header.php';
                 </div>
             </section>
 
-            <!-- Payment Methods -->
+            <!-- Métodos de pagamento -->
             <section class="py-5">
                 <div class="container">
                     <h2 class="text-center mb-5">Formas de Pagamento</h2>

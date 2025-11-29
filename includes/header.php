@@ -1,4 +1,8 @@
 <?php
+
+// CABEÇALHO PADRÃO
+// Inicia a sessão, carrega CSS e exibe a barra de navegação (Navbar).
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }

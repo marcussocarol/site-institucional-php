@@ -1,14 +1,17 @@
 <?php 
-// 1. Define o título para esta página
+
+// PÁGINA DE CONTATO E SUPORTE
+// Exibe canais de atendimento, formulário de mensagem e FAQ.
+
 $pageTitle = "SportMax - Contato";
-// 2. Inclui o cabeçalho
+
 require_once 'includes/header.php'; 
 if (isset($_GET['status']) && isset($_GET['msg'])) {
     // Coleta as mensagens da URL
     $status = htmlspecialchars($_GET['status']); 
     $msg = htmlspecialchars($_GET['msg']);
     
-    // Define a classe CSS do AdminLTE/Bootstrap
+    
     $alertClass = ($status === 'success') ? 'alert-success' : 'alert-danger';
 
     // Exibe a notificação
@@ -230,6 +233,6 @@ if (isset($_GET['status']) && isset($_GET['msg'])) {
         </div>
 
 <?php 
-// 3. Inclui o rodapé
+
 require_once 'includes/footer.php'; 
 ?>

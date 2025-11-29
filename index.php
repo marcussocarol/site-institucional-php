@@ -1,8 +1,10 @@
 <?php 
-// Define o título específico para esta página
+
+// PÁGINA INICIAL (HOME)
+// A vitrine do site. Foca em banners promocionais e navegação por categorias.
+
 $pageTitle = "SportMax - Home"; 
 
-// Inclui o cabeçalho
 require_once 'includes/header.php'; 
 ?>
 
@@ -114,6 +116,6 @@ require_once 'includes/header.php';
                 </div>
             </section>
         </div> <?php 
-// Inclui o rodapé
+
 require_once 'includes/footer.php'; 
 ?>

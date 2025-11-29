@@ -1,4 +1,8 @@
 <?php 
+
+// PÁGINA DE PERFIL DO USUÁRIO
+// Permite edição de dados cadastrais e exclusão de conta.
+
 $pageTitle = "Meu Perfil - SportMax";
 require_once 'includes/header.php'; 
 

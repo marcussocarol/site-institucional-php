@@ -1,4 +1,8 @@
 <?php 
+
+// PÁGINA DE LOGIN (INTERFACE DE ACESSO)
+// Formulário para autenticação de usuários já cadastrados.
+
 $pageTitle = "Login - SportMax";
 require_once 'includes/header.php'; 
 ?>

@@ -1,10 +1,16 @@
 <?php 
+
+// PÁGINA DE CARRINHO DE COMPRAS (VISUALIZAÇÃO)
+// Exibe os itens armazenados na sessão, calcula totais e permite checkout.
+
 $pageTitle = "SportMax - Sacola";
 require_once 'includes/header.php'; 
 
 // Calcula totais
 $total = 0;
+// Verifica se existe carrinho; se não, usa array vazio para evitar erros.
 $itens = isset($_SESSION['carrinho']) ? $_SESSION['carrinho'] : [];
+// Loop para somar (Preço * Quantidade) de cada item
 foreach($itens as $item) {
     $total += $item['preco'] * $item['quantidade'];
 }

@@ -1,20 +1,20 @@
 <?php
-/**
- * SERVIÇO DE VALIDAÇÃO COM IA
- * Responsável apenas por conversar com o Google Gemini.
- */
-function validarEmailComIA($email) {
-    // -------------------------------------------------------------------------
-    // PASSO 1: CONFIGURAÇÃO (COLOQUE SUA CHAVE AQUI DEPOIS DE EXTRAIR)
-    // -------------------------------------------------------------------------
-    $apiKey = 'AIzaSyD4yRvQAnnAsGtLKxalC807CKjOrXxMLWE'; // <--- SUA CHAVE API VAI AQUI ENTRE AS ASPAS
 
-    // Fail-open: Se não tiver chave, aprova para não travar o site em apresentação
+ // SERVIÇO DE VALIDAÇÃO COM IA (GOOGLE GEMINI)
+ // Responsável pela comunicação com a API externa.
+ 
+function validarEmailComIA($email) {
+
+    // PASSO 1: CONFIGURAÇÃO (CHAVE)
+
+    $apiKey = 'AIzaSyD4yRvQAnnAsGtLKxalC807CKjOrXxMLWE'; 
+
+    // Fail-open: Se não validar a chave, aprova para não travar o site em apresentação
     if (empty($apiKey)) {
         return true; 
     }
 
-    // URL da API (Modelo Flash 1.5 - Rápido e Gratuito)
+    // URL da API
     $url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' . urlencode($apiKey);
 
     // PASSO 2: O PROMPT (A INSTRUÇÃO)
@@ -31,13 +31,14 @@ function validarEmailComIA($email) {
         'contents' => [[ 'parts' => [[ 'text' => $prompt ]] ]]
     ];
 
+    // Inicializa o cURL (biblioteca do PHP para fazer requisições HTTP)
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($requestBody));
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_POST, true);
     curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 
-    $response = curl_exec($curl);
+    $response = curl_exec($curl); // Executa a chamada real para a nuvem do Google
     
     if ($response === false) { curl_close($curl); return true; } // Erro de conexão = Aprova
     
@@ -47,10 +48,12 @@ function validarEmailComIA($email) {
     $data = json_decode($response, true);
     $resultado = trim(strtoupper($data['candidates'][0]['content']['parts'][0]['text'] ?? ''));
 
-    // Se a IA disse INVALIDO, retornamos false (bloqueia o cadastro)
+    // Se a IA disse INVALIDO, retorna false (bloqueia o cadastro)
     if (str_contains($resultado, 'INVALIDO')) {
         return false;
     }
-    return true;
+
+    // Aprova o cadastro (padrão)
+    return true; 
 }
 ?>

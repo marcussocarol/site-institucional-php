@@ -1,5 +1,8 @@
 <?php
-// O componente footer.php
+
+// RODAPÉ PADRÃO
+// Encerra a estrutura da página, exibe informações institucionais e carrega scripts.
+
 ?>
         </div> <footer class="main-footer">
             <div class="container">
@@ -49,20 +52,5 @@
     </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@4.0.0-beta2/dist/js/adminlte.min.js"></script>
     <script src="script.js"></script>
-    <script>
-        // Mantemos a função Dark Mode aqui para garantir que ela carregue
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-            const icon = document.getElementById('darkModeIcon');
-            if (body.classList.contains('dark-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        }
-    </script>
 </body>
 </html>

@@ -1,13 +1,17 @@
 <?php 
+
+// PÁGINA DE AVALIAÇÕES E FEEDBACK
+// Exibe a listagem de comentários, calcula a média de notas e permite novas interações.
+
 $pageTitle = "Comentários - SportMax";
 require_once 'includes/header.php'; 
 require_once 'includes/config.php';
 
-// Busca comentários do banco
+// PASSO 1: RECUPERAÇÃO DE DADOS (READ) - Busca comentários do banco
 $stmt = $pdo->query("SELECT * FROM comentarios ORDER BY data_criacao DESC");
 $comentarios = $stmt->fetchAll();
 
-// Calcula média
+// PASSO 2: Calcula a média
 $media = 0;
 if (count($comentarios) > 0) {
     $soma = 0;
@@ -15,7 +19,7 @@ if (count($comentarios) > 0) {
     $media = number_format($soma / count($comentarios), 1);
 }
 ?>
-            <!-- Reviews Section -->
+            <!-- Avaliações -->
             <section class="py-5 bg-light">
                 <div class="container">
                     <div class="d-flex justify-content-between align-items-center mb-4">

@@ -1,4 +1,8 @@
 <?php 
+
+// PÁGINA DE CADASTRO (INTERFACE)
+// Responsável por coletar os dados e exibir erros de validação (incluindo IA).
+
 $pageTitle = "Cadastro - SportMax";
 require_once 'includes/header.php'; 
 ?>
